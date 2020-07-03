@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+    <div class="span5">
+        <br><br>
+        {% comment %}
+            <!--======================================   login modal content -->
+            <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 id="myModalLabel">Sign In</h3>
+                </div>
+                <div class="modal-body">
+
+<!--sign-up-->
+
+                    <form class="form-horizontal" action="/account/login/" method="post">
+                        <div class="control-group">
+                            <label class="control-label" for="username_or_email">Username/Email</label>
+                            <div class="controls">
+                                <input type="text" id="username_or_email" name="username_or_email" placeholder="Username/Email">
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="password">Password</label>
+                            <div class="controls">
+                                <input type="password" id="password" name="password" placeholder="Password">
+                                <a href="/account/password_reset/">Forget password?</a>
+                            </div>
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal">Close</button>
+                            <button class="btn btn-primary btn-success">Sign in </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div  style="padding-bottom: 24px;">
+            <a data-toggle="modal" href="#myModal" class="btn btn-success btn-primary btn-large">Fast Login</a>
+
+
+
+            </div>
+{% endcomment %}
+
+
+
+    </div>
+
+
+
+    <!------------------------------------------------    sign-up   ---------->
+
+    <div class="modal-body">
+        <form id="registration_form" class="form-horizontal" action="/account/register/" method="post">
+            <div class="control-group">
+                <label class="control-label" for="id_username">Username</label>
+
+                <div class="controls">
+                    <input type="text" id="id_username" name="username">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="id_email">Email</label>
+
+                <div class="controls">
+                    <input type="text" id="id_email" name="email">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="id_password1">Password</label>
+
+                <div class="controls">
+                    <input type="password" id="id_password1" name="password1">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="id_password2">Retype Password</label>
+
+                <div class="controls">
+                    <input type="password" id="id_password2" name="password2">
+                </div>
+            </div>
+            <div class="control-group">
+                <div>
+                    <div class="tooltip-demo bs-docs-tooltip-examples">
+                        <button style="margin-left: 70px;" class="btn btn-danger">Sign-up</button>
+
+
+                        <a href="#" rel="tooltip" data-placement="top" title="How to register?
+                                    1. on the right side of the main page, type in username, email and password.
+                                    2. click free sign-up button below.
+                                    3. after successful sign up, a activation e-mail will be send.
+                                    4. click on the link to active your account. "><i
+                                class="icon-question-sign"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!----------introduction to -three survey step---------->
+
+    <ul class="thumbnails">
+
+
+
+        <li class="span2"><p>CREATE</p></li>
+        <li class="span2"><p>SHARE</p></li>
+        <li class="span2"><p>ANALYSE</p></li>
+    </ul>
+    </div>
+
+
+
+{% endblock %}
+
+{% block social %}
+
+{% endblock %}
