@@ -1,0 +1,4 @@
+django 1.6
+python mySQL
+pygeopi
+python qrcode
